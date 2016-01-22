@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        
+        <title>phpPayPal Class Documentation - drewjoh.com</title>
+        <meta name="description" content="Web Applications Developer. Technology enthusiast. Business workflow solutions.">
+        <meta name="author" content="Drew Johnston">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+		
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
+		
+		<script src="/js/jquery.min.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+
+        <div class="container">
+        	
+			        	<div class="row">
+				<div class="col-md-12">
+	        		<div class="btn-group pull-right" style="margin-top: 25px;">
+					  <a href="/" class="btn btn-primary">Home</a>
+					  <a href="/rc" class="btn btn-primary">RC Stuff</a>
+					  <a href="/blog" class="btn btn-primary">Blog</a>
+					  <a href="/wiki" class="btn btn-primary">Wiki</a>
+					</div>
+					<h1><a href="/">Drew Johnston</a> <br class="visible-xs" /><small>Software Engineer, etc</small></h1>
+					<hr>
+				</div>
+			</div>
+
+			
+	        
+	        <h1>phpPayPal</h1>
+
+<p>(PHP 5) - This has not been tested with PHP 4.</p>
+
+<p>You can <a href="https://github.com/drewjoh/phppaypal">download this class</a> from the Github project downloads page.</p>
+
+<p><strong>To report an issue</strong>, please go to the <a href="https://github.com/drewjoh/phppaypal/issues">Github project issues page</a>.</p>
+
+<h2>Description</h2>
+
+<p><strong>phpPayPal</strong> ( )</p>
+
+<p><strong>phpPayPal</strong> contains the variables and methods needed to make interactions with PayPal.</p>
+
+<p>The methods currently implemented are:</p>
+
+<ul>
+<li><a href="/wiki/code/classes/phppaypal/examples/dodirectpayment">DoDirectPayment</a></li>
+<li><a href="/wiki/code/classes/phppaypal/examples/setexpresscheckout">SetExpressCheckout</a></li>
+<li><a href="/wiki/code/classes/phppaypal/examples/getexpresscheckoutdetails">GetExpressCheckoutDetails</a></li>
+<li><a href="/wiki/code/classes/phppaypal/examples/doexpresscheckoutpayment">DoExpressCheckoutPayment</a></li>
+<li><a href="/wiki/code/classes/phppaypal/examples/gettransactiondetails">GetTransactionDetails</a></li>
+<li><a href="/wiki/code/classes/phppaypal/examples/refundtransaction">RefundTransaction</a></li>
+</ul>
+
+<p><em>Scheduled for later are:</em></p>
+
+<ul>
+<li>DoAuthorization </li>
+<li>DoCapture </li>
+<li>DoReauthorization </li>
+<li>DoVoid </li>
+<li>TransactionSearch</li>
+<li>Mass Payment Methods</li>
+<li>Recurring Payment Methods</li>
+<li>DoReferenceTransaction</li>
+</ul>
+
+<h2>Class Parameters</h2>
+
+<p><code>NULL</code> - This class does not require any parameters to create an instance. Username, password and certificate information are currently embedded in the class itself.</p>
+
+<h2>Return Values</h2>
+
+<p><code>NULL</code> - This class does not return a value upon creating an instance.</p>
+
+<h2>Variables</h2>
+
+<h3>Public</h3>
+
+<p>Visit the public variables page for a full list of what&rsquo;s available in this class.</p>
+
+<h3>Private</h3>
+
+<p>You can view the private variables page for detailed information.</p>
+
+<ul>
+<li>API_USERNAME</li>
+<li>API_PASSWORD</li>
+<li>API_SIGNATURE</li>
+<li>API_ENDPOINT</li>
+<li>USE_PROXY</li>
+<li>PROXY_HOST</li>
+<li>PROXY_PORT</li>
+<li>PAYPAL_URL</li>
+<li>RETURN_URL</li>
+<li>CANCEL_URL</li>
+<li>VERSION</li>
+</ul>
+
+<h2>Methods</h2>
+
+<h3>Public</h3>
+
+<ul>
+<li>DoDirectPayment()</li>
+<li>SetExpressCheckout()</li>
+<li>SetExpressCheckoutSuccessfulRedirect()</li>
+<li>GetExpressCheckoutDetails()</li>
+<li>DoExpressCheckoutPayment()</li>
+<li>GetTransactionDetails()</li>
+<li>RefundTransaction()</li>
+<li>AddItem()</li>
+</ul>
+
+<h3>Private</h3>
+
+<ul>
+<li>hash<em>call(Method</em>Name, NVP_String)</li>
+<li>DeformatNVP(NVP_String)</li>
+<li>GetItems(Response)</li>
+<li>GenerateNVPString(Type)</li>
+<li>UrlEncodeVariables()</li>
+<li>UrlDecodeVariables()</li>
+<li></li>
+</ul>
+
+<h2>Examples</h2>
+
+<p>For example class calls, see <a href="/wiki/code/classes/phppaypal/examples">examples</a>.</p>
+
+<h2>Code</h2>
+
+<p>The code is about 65KB. You can download it from <a href="https://github.com/drewjoh/phppaypal">Github</a> or view it in the <a href="/wiki/code/classes/phppaypal/code">wiki</a>.</p>
+
+<h2>Notes</h2>
+
+<ul>
+<li>The ErrorCodesArray is not yet implemented; though the array may be there, don&rsquo;t use it yet!</li>
+</ul>
+
+			
+		</div><!-- /container -->
+		
+		<br>
+
+<footer class="footer">
+  <div class="container">
+    <div class="well well-sm">
+      &copy; 2014 Drew Johnston
+    </div>
+  </div>
+</footer>
+
+<!-- Google Analytics -->
+<script>
+    var _gaq=[['_setAccount','UA-2904341-5'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	$('table').addClass('table table-bordered table-hover'); // Adds our Bootstrap table class to markdown generated tables
+});
+</script>
+
+    </body>
+</html>

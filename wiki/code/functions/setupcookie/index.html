@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        
+        <title> - drewjoh.com</title>
+        <meta name="description" content="Web Applications Developer. Technology enthusiast. Business workflow solutions.">
+        <meta name="author" content="Drew Johnston">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+		
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
+		
+		<script src="/js/jquery.min.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+
+        <div class="container">
+        	
+			        	<div class="row">
+				<div class="col-md-12">
+	        		<div class="btn-group pull-right" style="margin-top: 25px;">
+					  <a href="/" class="btn btn-primary">Home</a>
+					  <a href="/rc" class="btn btn-primary">RC Stuff</a>
+					  <a href="/blog" class="btn btn-primary">Blog</a>
+					  <a href="/wiki" class="btn btn-primary">Wiki</a>
+					</div>
+					<h1><a href="/">Drew Johnston</a> <br class="visible-xs" /><small>Software Engineer, etc</small></h1>
+					<hr>
+				</div>
+			</div>
+
+			
+	        
+	        <h1>setupCookie</h1>
+
+<p>(PHP 4, PHP 5)</p>
+
+<p>setupCookie - Setup the local cookie for the site</p>
+
+<h2>Description</h2>
+
+<p>NULL <strong>setupCookie</strong> ( array $Settings )</p>
+
+<p><strong>setupCookie</strong> will check and either set a none existing cookie or confirm there is one already set.</p>
+
+<h2>Parameters</h2>
+
+<p><em>Settings</em></p>
+
+<ul>
+<li>An array of site/application settings setup at the beginning of a script execution. See <a href="/wiki/code/functions/settings_array">Settings Array</a></li>
+</ul>
+
+<h2>Return Values</h2>
+
+<p><em>NULL</em> - This function does not return a value.</p>
+
+<h2>Examples</h2>
+
+<p>Example of how to execute this function. See [[code:functions:settings_array|Settings Array]] to understand what is being passed.</p>
+
+<pre><code class="setupCookie($Settings);```">
+## Code ##
+
+</code></pre>
+
+<p>function setupCookie($Settings)
+    {
+    if(isset($<em>COOKIE[$Settings[&lsquo;site</em>cookie<em>name&rsquo;]]))
+        { $COOKIE = $</em>COOKIE[$Settings[&lsquo;site<em>cookie</em>name&rsquo;]]; define(&ldquo;COOKIE&rdquo;, $COOKIE); }
+    elseif(!isset($<em>COOKIE[$Settings[&lsquo;site</em>cookie<em>name&rsquo;]]))
+        {
+        $cookie = generatePassword(29); _ Generates a cookie name/id
+        setcookie($Settings[&lsquo;site</em>cookie<em>name&rsquo;], $cookie, time()+(60<em>60</em>24*14), &ldquo;/&rdquo;, $Settings[&lsquo;base</em>domain&rsquo;]);
+        define(&ldquo;COOKIE&rdquo;, $cookie);
+        }
+    }
+&ldquo;`</p>
+
+<h2>Notes</h2>
+
+<ul>
+<li>If the cookie is already present, we don&rsquo;t need to set $COOKIE. This is deprecated.</li>
+<li>We don&rsquo;t need to define(&lsquo;COOKIE&rsquo;) once we create a cookie. This is deprecated.</li>
+<li>Future version will probably just pass &lsquo;site<em>cookie</em>name&rsquo; instead of the whole $Settings array. (But we use [&lsquo;base_domain&rsquo;] also?)</li>
+</ul>
+
+			
+		</div><!-- /container -->
+		
+		<br>
+
+<footer class="footer">
+  <div class="container">
+    <div class="well well-sm">
+      &copy; 2014 Drew Johnston
+    </div>
+  </div>
+</footer>
+
+<!-- Google Analytics -->
+<script>
+    var _gaq=[['_setAccount','UA-2904341-5'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	$('table').addClass('table table-bordered table-hover'); // Adds our Bootstrap table class to markdown generated tables
+});
+</script>
+
+    </body>
+</html>

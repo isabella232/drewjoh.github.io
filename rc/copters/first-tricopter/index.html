@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        
+        <title>First Custom Tricopter Build - drewjoh.com</title>
+        <meta name="description" content="Web Applications Developer. Technology enthusiast. Business workflow solutions.">
+        <meta name="author" content="Drew Johnston">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+		
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
+		
+		<script src="/js/jquery.min.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+
+        <div class="container">
+        	
+			        	<div class="row">
+				<div class="col-md-12">
+	        		<div class="btn-group pull-right" style="margin-top: 25px;">
+					  <a href="/" class="btn btn-primary">Home</a>
+					  <a href="/rc" class="btn btn-primary">RC Stuff</a>
+					  <a href="/blog" class="btn btn-primary">Blog</a>
+					  <a href="/wiki" class="btn btn-primary">Wiki</a>
+					</div>
+					<h1><a href="/">Drew Johnston</a> <br class="visible-xs" /><small>Software Engineer, etc</small></h1>
+					<hr>
+				</div>
+			</div>
+
+			
+	        
+	        <h1>Tricopter Custom Build</h1>
+
+<h2>Parts List</h2>
+
+<table><thead>
+<tr>
+<th style="text-align: center">Qty</th>
+<th>Part</th>
+<th style="text-align: center">Links</th>
+<th style="text-align: right">Cost</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center">1</td>
+<td>Titan Tricopter Frame Kit + Camera Mount + 16&quot; Carbon Fiber Booms</td>
+<td style="text-align: center"><a href="http://www.fortisairframes.com/titan-tricopter-frame-kit/?source=drewjoh.com">Fortis</a></td>
+<td style="text-align: right">$136.95</td>
+</tr>
+<tr>
+<td style="text-align: center">1</td>
+<td>Video Transmitter Mast</td>
+<td style="text-align: center"><a href="http://www.fortisairframes.com/video-transmitter-mast/?source=drewjoh.com">Fortis</a></td>
+<td style="text-align: right">$6.95</td>
+</tr>
+<tr>
+<td style="text-align: center">1</td>
+<td>Silicone Boom Sleeve</td>
+<td style="text-align: center"><a href="http://www.fortisairframes.com/silicone-boom-sleeve/?source=drewjoh.com">Fortis</a></td>
+<td style="text-align: right">$4.95</td>
+</tr>
+<tr>
+<td style="text-align: center">3</td>
+<td>SunnySky x2212-13 980kv Motor<br><strong>Alt:</strong> hexTronik DT750 Brushless 750kv - <a href="http://www.hobbyking.com/hobbyking/store/uh_viewitem.asp?idproduct=6247&amp;aff=1354568">HobbyKing</a> ~$12.46</td>
+<td style="text-align: center"><a href="http://www.banggood.com/Wholesale-SunnySky-X2212-KV980-Brushless-Motor-For-RC-Airplane-Quadcopter-p-60600.html?p=N80409561477201405G7">Banggood</a></td>
+<td style="text-align: right">$16.60</td>
+</tr>
+<tr>
+<td style="text-align: center">3</td>
+<td>Afro ESC 30Amp Speed Controller (SimonK Firmware)</td>
+<td style="text-align: center"><a href="http://www.hobbyking.com/hobbyking/store/uh_viewitem.asp?idproduct=39708&amp;aff=1354568">HobbyKing</a></td>
+<td style="text-align: right">~$13.97</td>
+</tr>
+<tr>
+<td style="text-align: center">1</td>
+<td>Hobbyking KK2.1.5 Multi-rotor LCD Flight Control Board</td>
+<td style="text-align: center"><a href="http://www.hobbyking.com/hobbyking/store/uh_viewitem.asp?idproduct=54299&amp;aff=1354568">HobbyKing</a></td>
+<td style="text-align: right">~$30</td>
+</tr>
+<tr>
+<td style="text-align: center">9</td>
+<td>3.5mm Bullet Connectors</td>
+<td style="text-align: center"><a href="http://www.banggood.com/3_5mm-Gold-Bullet-Banana-Connector-Plug-For-ESC-Battery-Motor-p-915892.html?p=N80409561477201405G7">Banggood</a></td>
+<td style="text-align: right">$1.50</td>
+</tr>
+<tr>
+<td style="text-align: center">3</td>
+<td>1 Meter 16AWG Silicone Wire</td>
+<td style="text-align: center"><a href="http://www.banggood.com/1-Meter-14AWG-Or-16AWG-Silicone-Wire-SR-Wire-Silica-Gel-Cable-Wire-p-921159.html?p=N80409561477201405G7">Banggood</a></td>
+<td style="text-align: right">$2.35</td>
+</tr>
+<tr>
+<td style="text-align: center">1</td>
+<td>XT60 Parallel Adapter Cable (if you want 2 batteries at once)<br><strong>Alt:</strong> XT60 Harness for 2 Packs in Parallel - <a href="http://www.hobbyking.com/hobbyking/store/uh_viewitem.asp?idproduct=31462&amp;aff=1354568">HobbyKing</a>/<a href="http://www.hobbyking.com/hobbyking/store/uh_viewitem.asp?idproduct=47581&amp;aff=1354568">HobbyKing</a></td>
+<td style="text-align: center"><a href="http://www.banggood.com/XT60-Parallel-Adapter-Cable-Conversion-Line-For-Lipo-Battery-p-920024.html?p=N80409561477201405G7">Banggood</a></td>
+<td style="text-align: right">$5.65</td>
+</tr>
+<tr>
+<td style="text-align: center">1</td>
+<td>HXT 4mm to XT60 Battery Adapter</td>
+<td style="text-align: center"><a href="http://www.hobbyking.com/hobbyking/store/uh_viewitem.asp?idproduct=40041&amp;aff=1354568">HobbyKing</a><br><a href="http://www.hobbyking.com/hobbyking/store/uh_viewitem.asp?idproduct=36985&amp;aff=1354568">HobbyKing</a></td>
+<td style="text-align: right">~$3.75</td>
+</tr>
+<tr>
+<td style="text-align: center">1+</td>
+<td>Turnigy nano-tech 2200mah 4S 25~50C Lipo<br><strong>Alt:</strong> 3300mah 4S 25~50C Lipo - <a href="http://www.hobbyking.com/hobbyking/store/uh_viewitem.asp?idproduct=11924&amp;aff=1354568">HobbyKing</a> ~$36.44<br><strong>Alt:</strong> 4000mah 4S 35~70C Lipo - <a href="http://www.hobbyking.com/hobbyking/store/uh_viewitem.asp?idproduct=11928&amp;aff=1354568">HobbyKing</a> ~$36.65</td>
+<td style="text-align: center"><a href="http://www.hobbyking.com/hobbyking/store/uh_viewitem.asp?idproduct=11912&amp;aff=1354568">HobbyKing</a></td>
+<td style="text-align: right">~$19.44</td>
+</tr>
+<tr>
+<td style="text-align: center">1</td>
+<td>XT60 to 3 X 3.5mm bullet Multistar ESC Power Breakout Cable</td>
+<td style="text-align: center"><a href="http://www.hobbyking.com/hobbyking/store/uh_viewitem.asp?idproduct=25479&amp;aff=1354568">HobbyKing</a></td>
+<td style="text-align: right">~$2.70</td>
+</tr>
+<tr>
+<td style="text-align: center">1</td>
+<td>Turnigy TGY-390DMH Metal Gear Digital Servo 5.4kg / .11sec / 22.5g</td>
+<td style="text-align: center"><a href="http://www.hobbyking.com/hobbyking/store/uh_viewitem.asp?idproduct=30680&amp;aff=1354568">HobbyKing</a></td>
+<td style="text-align: right">~$28.60</td>
+</tr>
+<tr>
+<td style="text-align: center">2</td>
+<td>Turnigy Heat Shrink Tube 25mm Transparent</td>
+<td style="text-align: center"><a href="http://www.hobbyking.com/hobbyking/store/uh_viewitem.asp?idproduct=13839&amp;aff=1354568">HobbyKing</a></td>
+<td style="text-align: right">~$0.71</td>
+</tr>
+<tr>
+<td style="text-align: center">3</td>
+<td>10 x 5 Thin Style E-Prop Black CW Rotation</td>
+<td style="text-align: center"><a href="http://www.hobbyking.com/hobbyking/store/uh_viewitem.asp?idproduct=46967&amp;aff=1354568">HobbyKing</a></td>
+<td style="text-align: right">~$1.92</td>
+</tr>
+<tr>
+<td style="text-align: center">3</td>
+<td>10 x 5 Thin Style E-Prop Green CW Rotation</td>
+<td style="text-align: center"><a href="http://www.hobbyking.com/hobbyking/store/uh_viewitem.asp?idproduct=46969&amp;aff=1354568">HobbyKing</a></td>
+<td style="text-align: right">~$1.92</td>
+</tr>
+<tr>
+<td style="text-align: center">1</td>
+<td>ATG A-1 Propeller Balancer Magnetic</td>
+<td style="text-align: center"><a href="http://www.banggood.com/ATG-A-1-Propeller-Balancer-Magnetic-Essential-For-Quadcopter-FPV-Prop-p-78478.html?p=N80409561477201405G7">Banggood</a></td>
+<td style="text-align: right">~$6.60</td>
+</tr>
+</tbody></table>
+
+<p><em>Sources: <a href="http://www.fortisairframes.com/tested-titan-tri-setups/">Tested Tritan Tri Setups</a>, <a href="http://flitetest.com/articles/The_Tricopter_V2_5_build">Tricopter V2_5 Build</a></em></p>
+
+			
+		</div><!-- /container -->
+		
+		<br>
+
+<footer class="footer">
+  <div class="container">
+    <div class="well well-sm">
+      &copy; 2014 Drew Johnston
+    </div>
+  </div>
+</footer>
+
+<!-- Google Analytics -->
+<script>
+    var _gaq=[['_setAccount','UA-2904341-5'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	$('table').addClass('table table-bordered table-hover'); // Adds our Bootstrap table class to markdown generated tables
+});
+</script>
+
+    </body>
+</html>

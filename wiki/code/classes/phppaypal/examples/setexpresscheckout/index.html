@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        
+        <title> - drewjoh.com</title>
+        <meta name="description" content="Web Applications Developer. Technology enthusiast. Business workflow solutions.">
+        <meta name="author" content="Drew Johnston">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+		
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
+		
+		<script src="/js/jquery.min.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+
+        <div class="container">
+        	
+			        	<div class="row">
+				<div class="col-md-12">
+	        		<div class="btn-group pull-right" style="margin-top: 25px;">
+					  <a href="/" class="btn btn-primary">Home</a>
+					  <a href="/rc" class="btn btn-primary">RC Stuff</a>
+					  <a href="/blog" class="btn btn-primary">Blog</a>
+					  <a href="/wiki" class="btn btn-primary">Wiki</a>
+					</div>
+					<h1><a href="/">Drew Johnston</a> <br class="visible-xs" /><small>Software Engineer, etc</small></h1>
+					<hr>
+				</div>
+			</div>
+
+			
+	        
+	        <h1>SetExpressCheckout Examples</h1>
+
+<h2>Notes</h2>
+
+<p>If the <code>SetExpressCheckout()</code> request is successful, you will receive a <code>token</code> back, which you need to store, and after which you need to call <code>SetExpressCheckoutSuccessfulRedirect()</code> to redirect the customer to PayPal to proceed.</p>
+
+<h2>Request</h2>
+
+<pre><code>// Create instance of the phpPayPal class
+$paypal = new phpPayPal();
+
+// Set the amount total for this order.
+$paypal-&gt;amount_total = &#39;50.49&#39;;
+
+// You can manually set the return and cancel URLs, or keep the one&#39;s pre-set in the class definition
+$paypal-&gt;return_url = &#39;http///www.example.com/successful_return.php&#39;;
+$paypal-&gt;cancel_url = &#39;http///www.example.com/failed.php&#39;;
+
+// Make the request
+$paypal-&gt;SetExpressCheckout();
+
+// If successful, we need to store the token, and then redirect the user to PayPal
+if(!$paypal-&gt;_error)
+   {
+   // Store your token
+   $_SESSION[&#39;token&#39;] = $paypal-&gt;token;
+
+   // Now go to PayPal
+   $paypal-&gt;SetExpressCheckoutSuccessfulRedirect();
+   }
+</code></pre>
+
+<p>For more information on field descriptions, requirements and corresponding PayPal fields, see the <a href="/wiki/code/classes/phppaypal//parameterlist">parameters list</a>.</p>
+
+<h3>Required Fields</h3>
+
+<ul>
+<li><code>return_url</code></li>
+<li><code>cancel_url</code></li>
+<li><code>amount_total</code></li>
+</ul>
+
+<h3>Optional Fields</h3>
+
+<ul>
+<li><code>currency_code</code></li>
+<li><code>amount_max</code></li>
+<li><code>payment_action</code> - default is &lsquo;sale&rsquo;</li>
+<li><code>email</code></li>
+<li><code>description</code></li>
+<li><code>custom</code></li>
+<li><code>invoice_number</code></li>
+<li><code>require_confirmed_shipping_address</code></li>
+<li><code>no_shipping</code></li>
+<li><code>address_override</code></li>
+<li><code>token</code></li>
+<li><code>local_code</code></li>
+<li><code>page_style</code></li>
+<li><code>hdr_image</code></li>
+<li><code>hdr_border_color</code></li>
+<li><code>bdr_back_color</code></li>
+<li><code>hdr_flow_color</code></li>
+<li><code>payflow_color</code></li>
+<li><code>channel_type</code></li>
+<li><code>solution_type</code></li>
+<li><strong>Shipping Address</strong>
+
+<ul>
+<li><code>shipping_name</code></li>
+<li><code>shipping_address1</code></li>
+<li><code>shipping_address2</code></li>
+<li><code>shipping_city</code></li>
+<li><code>shipping_state</code></li>
+<li><code>shipping_postal_code</code></li>
+<li><code>shipping_country_code</code></li>
+<li><code>shipping_phone_number</code></li>
+</ul></li>
+</ul>
+
+<h2>Response</h2>
+
+<p>The class instance will always provide the <em>raw</em> PayPal response to the <code>Response</code> array. During testing (sandbox mode), you can simply output the value of <code>Response</code> to see the PayPal response.</p>
+
+<pre><code>$paypal-&gt;Response;
+
+// Display the response
+print_r($paypal-&gt;Response);
+</code></pre>
+
+<h3>Success Response</h3>
+
+<p>If the transaction was successful, PayPal will return the following values/</p>
+
+<ul>
+<li><code>token</code></li>
+</ul>
+
+<h3>Error Response</h3>
+
+<p>If there was an exception with the interaction with PayPal, <code>_error</code> will return <code>true</code>.</p>
+
+<p>See the <a href="/wiki/code/classes/phppaypal/examples/errors">error documentation</a> for details about error return values and procedures.</p>
+
+			
+		</div><!-- /container -->
+		
+		<br>
+
+<footer class="footer">
+  <div class="container">
+    <div class="well well-sm">
+      &copy; 2014 Drew Johnston
+    </div>
+  </div>
+</footer>
+
+<!-- Google Analytics -->
+<script>
+    var _gaq=[['_setAccount','UA-2904341-5'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	$('table').addClass('table table-bordered table-hover'); // Adds our Bootstrap table class to markdown generated tables
+});
+</script>
+
+    </body>
+</html>
