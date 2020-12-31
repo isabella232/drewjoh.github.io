@@ -572,6 +572,10 @@ li > p {
 
 /* Previously */
 
+.previously {
+  padding-top: 0.25rem;
+}
+
 .previously > h4 {
   font-weight: 600;
   font-size: 1.125rem;
@@ -629,6 +633,11 @@ li > p {
   background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
 }
 
+.border-gray-300 {
+  --tw-border-opacity: 1;
+  border-color: rgba(209, 213, 219, var(--tw-border-opacity));
+}
+
 .border-gray-800 {
   --tw-border-opacity: 1;
   border-color: rgba(31, 41, 55, var(--tw-border-opacity));
@@ -640,6 +649,10 @@ li > p {
 
 .rounded-lg {
   border-radius: 0.5rem;
+}
+
+.border-2 {
+  border-width: 2px;
 }
 
 .border {
@@ -721,6 +734,11 @@ li > p {
 
 .leading-8 {
   line-height: 2rem;
+}
+
+.mx-12 {
+  margin-left: 3rem;
+  margin-right: 3rem;
 }
 
 .my-auto {
